@@ -4,41 +4,9 @@ layout: default
 <div class="post">
   <header>
     <h5 class="subheader">
-      {% assign d = page.date | date: "%d" | plus:'0' %}
-      {{ page.date | date: "%B" }}
-      {% case d %}
-      {% when 1 or 21 or 31 %}{{ d }}st,
-      {% when 2 or 22 %}{{ d }}nd,
-      {% when 3 or 23 %}{{ d }}rd,
-      {% else %}{{ d }}th,
-      {% endcase %}
-      {{ page.date | date: "%Y" }}
+      {{ page.date | date: "%Y/%m/%d" }}
     </h5>
-    <h1>{{ page.title }}</h1>
-    <!-- Categories -->
-    <div class="categories">
-      {% unless page.categories == empty %}
-        Posted in:
-        <ul class="categories-list">
-          {% assign categories_list = page.categories %}
-          {% if categories_list.first[0] == null %}
-            {% for category in categories_list %}
-              <li>
-                <a href="{{ site.BASE_PATH }}/{{ site.categories_path }}#{{ category }}-ref">
-                  {{ category | join: "/" }}{% unless forloop.last %},{% endunless %}
-                </a>
-              </li>
-            {% endfor %}
-          {% else %}
-            {% for category in categories_list %}
-              <li><a href="{{ site.BASE_PATH }}/{{ site.categories_path }}#{{ category[0] }}-ref">
-                {{ category[0] | join: "/" }}
-              </a></li>
-            {% endfor %}
-          {% endif %}
-        </ul>
-      {% endunless %}
-    </div>
+    <h1 class="blog-article-title"><a class="mdl-color-text--grey-800" href="{{ post.url | replace_first: '/', '' | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a></h1>
   </header>
   <article>
     {{ content }}
@@ -52,7 +20,7 @@ layout: default
         {% if tags_list.first[0] == null %}
         {% for tag in tags_list %}
           <li>
-            <a href="{{ site.BASE_PATH }}/{{ site.tags_path }}#{{ tag }}-ref">
+            <a href="{{ site.tags_path | replace_first: '/', '' | prepend: site.baseurl | prepend: site.url }}#{{ tag | replace:' ','-' }}-ref">
             {{ tag }}{% unless forloop.last %},{% endunless %}
             </a>
           </li>
@@ -60,7 +28,7 @@ layout: default
         {% else %}
         {% for tag in tags_list %}
           <li>
-            <a href="{{ site.BASE_PATH }}/{{ site.tags_path }}#{{ tag[0] }}-ref">
+            <a href="{{ site.tags_path | replace_first: '/', '' | prepend: site.baseurl | prepend: site.url }}#{{ tag | replace:' ','-' }}-ref">
               {{ tag[0] }}{% unless forloop.last %},{% endunless %}
             </a>
           </li>
@@ -141,7 +109,7 @@ layout: default
 
     <div class="mdl-cell mdl-cell--6-col next">
       {% if page.next %}
-        <a class="mdl-button mdl-button--primary" href="{{ page.next.url }}" title="{{ page.next.title }}">Next Post &rarr;</a>
+        <a class="mdl-button mdl-button--primary" href="{{ page.next.url }}" title="{{ page.next.title }}">Next Post &rarr;</a>
       {% else %}
         <a class="mdl-button mdl-button--primary" disabled>Next Post &rarr;</a>
       {% endif %}

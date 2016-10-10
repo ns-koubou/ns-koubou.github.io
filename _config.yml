@@ -1,28 +1,35 @@
 # Site settings
-title: Paper Theme
-description: > # this means to ignore newlines until "baseurl:"
-  A gentle theme for Jekyll utilising material design.
+title: えぬえす工房
+description: えぬえす工房
 baseurl: "/" # the subpath of your site, e.g. /blog/
+tags_path: "/blog/tags/"
 # url: "http://yourdomain.com" # the base hostname & protocol for your site you most probably don't need to set it
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 paginate: 5 # pagination based on number of posts
-paginate_path: "page/:num"
-highlighter: pygments
-gems: [jekyll-paginate, jekyll-coffeescript]
+paginate_path: "blog/page/:num"
+excerpt_separator: "<!--more-->"
+gems: 
+  - jekyll-paginate
+  - jekyll-coffeescript
+  - jekyll-seo-tag
+
+# Outputting
+permalink: "/blog/:year/:month/:day/:title/"
 
 # comments
-disqus: # add disqus shortname here
+disqus: nskoubou # add disqus shortname here
 
 # author info
 # add your appropriate info here
-author: # your name
-bio:    # your bio
-email:
-email_md5: # md5 hash of your email
-twitter_username:
-github_username:
+author: NV # your name
+bio: 見習いセキュリティエンジニア # your bio
+email: nvsofts@gmail.com
+email_md5: c6420a2a19f7a282192a2573597e96e2 # md5 hash of your email
+twitter_username: nvsofts
+github_username: nvsofts
 
 # Theming options
 # These settings are mandatory.

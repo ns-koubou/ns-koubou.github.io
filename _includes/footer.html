@@ -14,7 +14,7 @@
       </div>
       {% endif %}
       {% if site.twitter_username %}
-      <a id="twitter" class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent" href="https://twitter.com/{{ site.twitter_username }}">
+      <a id="twitter_follow" class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent" href="https://twitter.com/{{ site.twitter_username }}">
         <span class="icon">
           <svg viewBox="0 0 16 16">
             <path style="fill: #5EA9DD" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
@@ -22,7 +22,7 @@
           </svg>
         </span>
       </a>
-      <div class="mdl-tooltip" for="twitter">
+      <div class="mdl-tooltip" for="twitter_follow">
         Follow on twitter
       </div>
       {% endif %}
@@ -35,37 +35,18 @@
     <div class="mdl-mega-footer__drop-down-section">
       <h1 class="mdl-mega-footer__heading">Pages</h1>
       <ul class="mdl-mega-footer__link-list">
+        <li>
+          <a href="{{ site.baseurl }}">Home</a>
+        </li>
         {% for page in site.pages %}
           {% if page.title %}
+          {% unless page.path contains "/page/" %}
             <li>
-              <a href="{{ page.url | prepend: site.baseurl | prepend: site.url}}">{{ page.title }}</a>
+              <a href="{{ page.url | replace_first: '/', '' | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a>
             </li>
+          {% endunless %}
           {% endif %}
       {% endfor %}
-      </ul>
-    </div>
-    <div class="mdl-mega-footer__drop-down-section">
-      <h1 class="mdl-mega-footer__heading">Categories</h1>
-      <ul class="mdl-mega-footer__link-list">
-          {% assign categories_list = site.categories %}
-            {% if categories_list.first[0] == null %}
-              {% for category in categories_list %}
-                <li>
-                  <a href="{{ 'categories.html' | prepend: site.baseurl | prepend: site.url}}/{{ category | replace:' ','-' }}">
-                    {{ category | capitalize }}
-                  </a>
-                </li>
-              {% endfor %}
-            {% else %}
-              {% for category in categories_list %}
-                <li>
-                  <a href="{{ 'categories.html' | prepend: site.baseurl | prepend: site.url}}#{{ category[0] | replace:' ','-' }}">
-                      {{ category[0] | capitalize }}
-                  </a>
-                </li>
-              {% endfor %}
-            {% endif %}
-            {% assign categories_list = nil %}
       </ul>
     </div>
   </div>

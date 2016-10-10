@@ -1,0 +1,23 @@
+---
+layout: page
+title: Blog Tags
+icon: folder
+order: -1
+---
+
+{% for tag in site.tags %}
+<h4 id="tag-{{ tag[0] | replace:' ','-' }}"><a name="{{ tag[0] | replace:' ','-' }}-ref">{{ tag[0] }}</a></h4>
+  {% assign pages_list = tag[1] %}
+  <ul>
+  {% for node in pages_list %}
+    {% if node.title != null %}
+      {% if group == null or group == node.group %}
+        <li><a href="{{ node.url | replace_first: '/', '' | prepend: site.baseurl | prepend: site.url }}">
+            {{node.title}}&nbsp;({{ node.date | date: "%Y/%m/%d" }})
+        </a></li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  </ul>
+  {% assign pages_list = nil %}
+{% endfor %}
