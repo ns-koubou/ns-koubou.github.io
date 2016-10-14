@@ -3,17 +3,20 @@ title: えぬえす工房
 description: えぬえす工房
 baseurl: ""
 tags_path: "/blog/tags/"
-# url: "http://yourdomain.com" # the base hostname & protocol for your site you most probably don't need to set it
+url: "http://www.ns-koubou.com"
 
 # Build settings
 markdown: kramdown
-highlighter: ""
+highlighter: rouge
 paginate: 5 # pagination based on number of posts
 paginate_path: "blog/page/:num"
 excerpt_separator: "<!--more-->"
-gems: 
+gems:
+  - jemoji
+  - jekyll-feed
   - jekyll-paginate
   - jekyll-coffeescript
+  - jekyll-sitemap
 
 # Outputting
 permalink: "/blog/:year/:month/:day/:title/"
