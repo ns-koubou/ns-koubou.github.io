@@ -7,11 +7,17 @@ tags_path: "/blog/tags/"
 top_url: "http://www.ns-koubou.com"
 
 # Build settings
+excerpt_separator: "<!--more-->"
+
 markdown: kramdown
-highlighter: rouge
+highlighter: nil
+
+kramdown:
+  input: GFM
+
 paginate: 5 # pagination based on number of posts
 paginate_path: "blog/page/:num"
-excerpt_separator: "<!--more-->"
+
 gems:
   - jemoji
   - jekyll-feed

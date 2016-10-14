@@ -85,8 +85,8 @@ WSLで使用されている拡張属性を見るためのツールとして、Gi
 このツールはLinuxのstat(1)コマンドと似たもので、引数にVolFsに含まれているファイルを渡すとそのファイルに含まれている拡張属性を読みだして表示してくれます。
 例として、/etc/shadowの情報を見たときの出力は以下の通りです。
 
-```bash
->lxsstat C:\Users\NV\AppData\Local\lxss\rootfs\etc\shadow
+```markup
+lxsstat C:\Users\NV\AppData\Local\lxss\rootfs\etc\shadow
   File: 'C:\Users\NV\AppData\Local\lxss\rootfs\etc\shadow'
   Size: 906             Blocks: 8          IO Block: 4096   regular file
 Device: 0h/0d   Inode: 39406496739841858  Links: 1
@@ -125,7 +125,7 @@ NTFSにおいて、ファイルはファイルレコードとして格納され�
 このヘッダ以降には、ファイルについての各種属性が続いており、最後にエンドマーカとして0xFFFFFFFFが出現します。
 つまり、ファイルレコードは以下のような構成になっています。
 
-```
+```markup
 ヘッダ
 属性1
 属性2
@@ -148,7 +148,7 @@ NTFSにおいて、ファイルはファイルレコードとして格納され�
 Windows上で動作するGUIツールもありますが、ここではNTFS-3Gに含まれているntfscatコマンドを使用してWSL上のファイルに含まれている拡張属性を見てみます。
 例として、`/etc/shadow`の拡張属性を見てみます。引数に`-a [属性の名前($は除く)]`を与えることで、特定の属性のみを見ることができます。
 
-```bash
+```command-line
 $ sudo ntfscat -a EA /dev/sda3 /Users/NV/AppData/Local/lxss/rootfs/etc/shadow | hexdump -C
 00000000  48 00 00 00 00 07 38 00  4c 58 41 54 54 52 42 00  |H.....8.LXATTRB.|
 00000010  00 00 01 00 a0 81 00 00  00 00 00 00 2a 00 00 00  |............*...|

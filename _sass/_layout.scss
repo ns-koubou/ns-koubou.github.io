@@ -272,16 +272,41 @@
   text-decoration: none;
 }
 
-.hljs {
-  font-size: 16px;
-  font-family: 'Inconsolata', monospace;
-}
-
-p, ul, ol {
+html, body {
   font-family: 'Noto Sans Japanese', sans-serif;
   font-size: 16px;
 }
 
-article > p {
-  text-indent: 1em;
+p, ul, ol {
+  font-size: 16px;
+}
+
+table {
+  margin: 0.5em;
+
+  th, td {
+    margin: 0.25em;
+  }
+}
+
+article {
+  > p {
+    text-indent: 1em;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  p > code {
+    font-family: Inconsolata, 'Noto Sans Japanese', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    background-color: rgb(246, 249, 251);
+  }
+
+  code[class*="language-"], pre[class*="language-"] {
+    font-family: Inconsolata, 'Noto Sans Japanese', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 16px;
+  }
 }
