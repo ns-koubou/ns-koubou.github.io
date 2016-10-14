@@ -5,17 +5,28 @@
 
   <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
+  {% if page.title %}
+    {% assign title = page.title | escape %}
+  {% else %}
+    {% assign title = site.title | escape %}
+  {% endif %}
+  {% if page.excerpt %}
+    {% assign description = page.excerpt | strip_html | strip_newlines | truncate: 160 | escape %}
+  {% else %}
+    {% assign description = site.description | escape %}
+  {% endif %}
   <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}">
-  <meta property="og:title" conecnt="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url | prepend: site.baseurl }}">{% if page.date %}
-  <meta property="og:image" content="{{ site.url }}{{ page.date | date: "%Y%m%d" | prepend: page.image_dir | prepend: site.baseurl }}/{{ page.thumb }}">{% endif %}
-  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | escape }}{% else %}{{ site.description | escape }}{% endif %}">
+  <meta property="og:title" conecnt="{{ title }}">
+  <meta property="og:url" content="{{ site.top_url }}{{ page.url | prepend: site.baseurl }}">
+  <meta property="og:description" content="{{ description }}">
   <meta property="og:site_name" content="{{ site.title | escape }}">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
 
-  <meta name="title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | escape }}{% else %}{{ site.description | escape }}{% endif %}">
+  <meta name="title" content="{{ title }}">
+  <meta name="description" content="{{ description }}">
 
   <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.2.1/material.blue-pink.min.css" type="text/css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/github.min.css">
@@ -23,6 +34,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata&amp;subset=latin-ext" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
   <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl | prepend: site.url }}" type="text/css">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.top_url }}">
   {% feed_meta %}
 </head>

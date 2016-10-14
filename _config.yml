@@ -3,7 +3,8 @@ title: えぬえす工房
 description: えぬえす工房
 baseurl: ""
 tags_path: "/blog/tags/"
-url: "http://www.ns-koubou.com"
+#url:
+top_url: "http://www.ns-koubou.com"
 
 # Build settings
 markdown: kramdown
