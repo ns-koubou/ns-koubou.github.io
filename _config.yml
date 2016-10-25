@@ -4,7 +4,7 @@ description: えぬえす工房
 baseurl: ""
 tags_path: "/blog/tags/"
 #url:
-top_url: "http://www.ns-koubou.com"
+top_url: "https://www.ns-koubou.com"
 
 # Build settings
 excerpt_separator: "<!--more-->"
