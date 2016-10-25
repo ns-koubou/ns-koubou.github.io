@@ -325,13 +325,13 @@ table tbody tr:nth-child(2n) td {
   background: #F6F9FB;
 }
 
+article > p, div.post > p {
+  text-indent: 1em;
+}
+
 article {
   * {
     text-align: justify;
-  }
-
-  > p {
-    text-indent: 1em;
   }
 
   img {
