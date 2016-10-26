@@ -42,7 +42,7 @@
           {% if page.title %}
           {% unless page.path contains "/page/" %}
             <li>
-              <a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a>
+              <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
             </li>
           {% endunless %}
           {% endif %}
