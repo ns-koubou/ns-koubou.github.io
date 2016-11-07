@@ -38,8 +38,3 @@ initSearch = ->
 
 # fire application
 do initialize
-
-# wrap table
-$ ->
-  $('table:not(.scroll table)').wrap('<div class="scroll"></div>')
-  @
