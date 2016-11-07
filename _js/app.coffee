@@ -1,6 +1,3 @@
----
----
-
 # app initialize operations
 initialize = ->
   # set min height of container
@@ -34,7 +31,7 @@ initSearch = ->
   SimpleJekyllSearch
     searchInput: searchInputElem
     resultsContainer: resultsElem
-    json: '{{ "/search.json" | prepend: site.baseurl }}'
+    json: '/search.json'
     searchResultTemplate: '<a class="mdl-menu__item" href="{url}">{title}</a>'
     noResultsText: '<a class="mdl-menu__item" disabled>No results.</a>'
 

@@ -10,7 +10,11 @@ $grey-color:        #828282;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "layout",
-        "syntax-highlighting",
-        "prism"
+  "material.blue-pink",
+  "material-icons",
+  "inconsolata",
+  "roboto",
+  "layout",
+  "syntax-highlighting",
+  "prism"
 ;
