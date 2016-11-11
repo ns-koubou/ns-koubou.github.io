@@ -6,7 +6,9 @@ tags: NES sunxi
 
 2016/11/10に発売された任天堂の「[ニンテンドークラシックミニ ファミリーコンピュータ](https://www.nintendo.co.jp/clv/)」についてです。
 
-(以下、ファミコンミニと略します [GBAのやつ](https://www.nintendo.co.jp/n08/fsmj/)ではないので注意)
+(以降、ファミコンミニと略します [GBAのやつ](https://www.nintendo.co.jp/n08/fsmj/)ではないので注意)
+
+<!--more-->
 
 発売前に分解した人が出たりしたことで
 
