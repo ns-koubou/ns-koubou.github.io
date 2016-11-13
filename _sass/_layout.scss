@@ -277,7 +277,7 @@ html, body * {
 }
 
 html, body {
-  font-family: 'Hiragino Kaku Gothic W3 JIS2004', sans-serif;
+  font-family: 'a-otf-gothic-bbb-pr6n', sans-serif;
   font-size: 16px;
 }
 
@@ -341,12 +341,12 @@ article {
   }
 
   p > code {
-    font-family: Inconsolata, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', 'Hiragino Kaku Gothic W3 JIS2004', monospace;
+    font-family: Inconsolata, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', 'a-otf-gothic-bbb-pr6n', monospace;
     background-color: rgb(246, 249, 251);
   }
 
   code[class*="language-"], pre[class*="language-"] {
-    font-family: Inconsolata, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', 'Hiragino Kaku Gothic W3 JIS2004', monospace;
+    font-family: Inconsolata, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', 'a-otf-gothic-bbb-pr6n', monospace;
     font-size: 16px;
   }
 }
