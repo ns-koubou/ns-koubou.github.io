@@ -273,11 +273,11 @@
 }
 
 html, body * {
-  letter-spacing: .05em;
+  letter-spacing: .03em;
 }
 
 html, body {
-  font-family: 'a-otf-gothic-bbb-pr6n', sans-serif;
+  font-family: 'heisei-kaku-gothic-std', sans-serif;
   font-size: 16px;
 }
 
@@ -340,13 +340,13 @@ article {
     display: block;
   }
 
-  p > code {
-    font-family: Inconsolata, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', 'a-otf-gothic-bbb-pr6n', monospace;
+  code {
+    font-family: Inconsolata, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', 'heisei-kaku-gothic-std', monospace;
     background-color: rgb(246, 249, 251);
   }
 
   code[class*="language-"], pre[class*="language-"] {
-    font-family: Inconsolata, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', 'a-otf-gothic-bbb-pr6n', monospace;
+    font-family: Inconsolata, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', 'heisei-kaku-gothic-std', monospace;
     font-size: 16px;
   }
 }
