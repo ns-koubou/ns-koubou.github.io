@@ -7,10 +7,11 @@ tags: ファミコンミニ sunxi
 ## 時代は自前ビルド
 
 ファミコンミニで、自前ビルドのLinuxがとうとう[動作しました](http://blog.urandom.team/post/my-linux-kernel-on-nesclassic/)。
+Linuxカーネルのビルドは面倒な作業が予想されたので先延ばしにしてたわけですが（負け惜しみ風）、一応動作する方法が公開されたので良しとします。
+
+<!--more-->
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="ja" dir="ltr">ファミコンミニで自前ビルドのLinux動いた (My Linux kernel on NES Classic) <a href="https://t.co/00EZZgMx7A">pic.twitter.com/00EZZgMx7A</a></p>&mdash; op (@6f70) <a href="https://twitter.com/6f70/status/797939754528444416">November 13, 2016</a></blockquote>
-
-Linuxカーネルのビルドは面倒な作業が予想されたので先延ばしにしてたわけですが（負け惜しみ風）、一応動作する方法が公開されたので良しとします。
 
 とりあえず、自前ビルドを手元で追試してみましたが、正常に動作するカーネルが得られました。
 
