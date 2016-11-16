@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ニンテンドークラシックミニ ファミリーコンピュータの中身の話
-tags: NES sunxi
+tags: ファミコンミニ sunxi
 ---
 
 2016/11/10に発売された任天堂の「[ニンテンドークラシックミニ ファミリーコンピュータ](https://www.nintendo.co.jp/clv/)」についてです。
