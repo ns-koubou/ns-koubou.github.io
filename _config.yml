@@ -19,7 +19,7 @@ kramdown:
   input: GFM
 
 paginate: 5 # pagination based on number of posts
-paginate_path: "blog/page/:num"
+paginate_path: "/blog/page/:num"
 
 gems:
   - jemoji
