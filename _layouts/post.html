@@ -45,7 +45,7 @@ layout: default
       <h4>Share Post</h4>
 
 
-      <a id="twitter" class="mdl-button mdl-button--primary twitter" href="https://twitter.com/share?text={{page.title | encode}}{% if site.author.twitter%}&via={{site.author.twitter}}{% endif %}"
+      <a id="twitter" class="mdl-button mdl-button--primary twitter" href="https://twitter.com/share?text={{page.title | uri_escape}}{% if site.author.twitter%}&via={{site.author.twitter}}{% endif %}"
          onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="icon">
           <svg viewBox="0 0 16 16">
