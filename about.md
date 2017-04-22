@@ -64,3 +64,5 @@ PCゲームやったり、鉄道に興味があったり。
 [http://steamcommunity.com/profiles/76561198043313779/](http://steamcommunity.com/profiles/76561198043313779/) (Steam)
 
 [http://battlelog.battlefield.com/bf4/ja/user/nvsofts/](http://battlelog.battlefield.com/bf4/ja/user/nvsofts/) (Battlelog)
+
+![BF1 Stats](https://bots.tracker.network/bf1/bf1.php?platform=3&username=nvsofts)
