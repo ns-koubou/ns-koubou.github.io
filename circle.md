@@ -10,6 +10,9 @@ order: 2
 
 #### 今後の予定
 
+#### C95
+[Twitter](https://twitter.com/nvsofts/status/1075224090615545857)を参照してください。
+
 #### C94
 [Twitter](https://twitter.com/nvsofts/status/1026471115261018113)を参照してください。
 
