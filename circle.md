@@ -10,6 +10,9 @@ order: 2
 
 #### 今後の予定
 
+#### 技術書典6
+[イベントのサークルページ](https://techbookfest.org/event/tbf06/circle/36260010)を見た方が良いです。
+
 #### C95
 [Twitter](https://twitter.com/nvsofts/status/1075224090615545857)を参照してください。
 
