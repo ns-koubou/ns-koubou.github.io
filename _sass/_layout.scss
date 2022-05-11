@@ -338,6 +338,26 @@ article {
     max-width: 100%;
     height: auto;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img.width75 {
+    @include desktop {
+      max-width: 75%;
+    }
+  }
+
+  img.width50 {
+    @include desktop {
+      max-width: 50%;
+    }
+  }
+
+  img.width25 {
+    @include desktop {
+      max-width: 25%;
+    }
   }
 
   code {
