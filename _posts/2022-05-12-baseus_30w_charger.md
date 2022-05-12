@@ -4,7 +4,7 @@ title: Baseus Super Si 30W PD充電器 CCCJG30CS レビュー
 tags: レビュー 充電器
 ---
 
-**プロモーションを含みます**
+**（商品提供を受けて記事を作成しています、それ以上の対価は発生していません）**
 
 Baseusの「[Super Si 30W PD充電器 CCCJG30CS](https://www.amazon.co.jp/dp/B09X1M4BN1)」をいただきました。
 
