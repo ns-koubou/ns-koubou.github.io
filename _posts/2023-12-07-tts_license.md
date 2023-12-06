@@ -4,7 +4,7 @@ title: 有料系音声合成ソフトのライセンス認証について
 tags: 音声合成 ライセンス
 ---
 
-この記事は、[ぼすきー Advent Calendar 2023](https://adventar.org/calendars/8776)の6日目の参加記事です。
+この記事は、[ぼすきー Advent Calendar 2023](https://adventar.org/calendars/8776)の7日目の参加記事です。
 
 <!--more-->
 
