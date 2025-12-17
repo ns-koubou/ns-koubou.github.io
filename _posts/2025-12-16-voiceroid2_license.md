@@ -33,15 +33,11 @@ AITalk系のソフトで古いアクティベーション方式を取ってい�
 
 ![VOICEROID2 v2.2.0.0のファイル（一部）](/assets/posts/2025-12-16/voiceroid2.png)
 
-ファイルを確認すると、以下のファイルがそれっぽいファイルに見えます。
+ファイルを確認すると、`DeactivationTool.exe`が増えていることが確認できます。
+これは[Sentinel LDKをDRMとして採用していた頃](/blog/2023/12/07/tts_license/)にはなかったファイルです。
+代わりに、`hasp_net_windows.dll`などのSentinel LDK関連のファイルは含まれていません。
 
-- `DeactivationTool.exe`
-- `Licenser.dll`
-- `AI.Framework.License.dll`
-
-これらのファイルは[Sentinel LDKをDRMとして採用していた頃](/blog/2023/12/07/tts_license/)にはなかったファイルです。
-
-また、A.I.VOICE2のファイルを見てみると、`AI.Framework.License.dll` は共通して存在することが確認できます。
+念のため、A.I.VOICE2のファイルを見てみると、`AI.Framework.License.dll` などのファイルは共通して存在しますが、同じくSentinel LDK関連のファイルは含まれていません。
 
 ![A.I.VOICE2のファイル（一部）](/assets/posts/2025-12-16/aivoice2.png)
 
@@ -58,3 +54,4 @@ AITalk系のソフトで古いアクティベーション方式を取ってい�
 そのため、2026年4月以降も新規アクティベーションができる、新しいバージョンのVOICEROID2においては、ライセンス認証が保持されるかのルールはA.I.VOICE以降と同じと考えるべきです。
 
 幸いなことにディアクティベーションが可能になったので、PCの構成変更の作業前に一度ディアクティベーションをすることをおすすめします。
+
